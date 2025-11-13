@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GREENTA Profile</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link"> <h1><strong>GREENTA</strong></h1>
+            </a>
+        </div>
+        <div class="header-menu-btn" onclick="toggleSidebar()">
+            <span>&#9776; Menu</span>
+        </div>
+    </header>
+    
+    <div class="main-layout">
+        
+        <main>
+            <div class="content-page">
+                <h2>Testimonials</h2>
+                <hr>
+                <p><u><h2>What Our Customers Say</h2></u></p>
+                
+                <p> At <strong>GREENTA</strong>, we’re proud to support athletes, fitness enthusiasts, and anyone striving for a healthier lifestyle. Here’s what some of our customers have to say about their experience with our products and services. <br>
+
+                    <p>“GREENTA’s protein bars are the perfect post-workout boost. Great taste, clean ingredients, and real results — I’ve noticed faster recovery and more energy during my training sessions.” <br>
+                        — <i>Alex, 28</i></p>
+                    
+                    <p>“I eat a GREENTA bar everyday during my break at work. Being a construction worker can be very hard, but GREENTA’s delicious treats help me stay more focused and precise on the job.” <br>                                                                                                                                            
+                        — <i>John, 34</i></p>
+                    
+                    <p>“As a former professional athlete, I tried many different products and supplements, but GREENTA gave me the right boost and motivation to keep on training and staying fit, even at 51 years old.” <br>                                                                                                                               
+                        — <i>Barbara, 51</i></p>
+                    
+                    <p>“The personalized coaching plan from GREENTA helped me combine nutrition, supplementation, and training in a way that actually works. Three months in, and I feel stronger, leaner, and more confident than ever.” <br>
+                        — <i>Sophia, 24</i></p>
+                    
+                    <p>“I used to struggle with fatigue after work, but the GREENTA pre-workout and snack combo completely changed my routine. Now I train with focus and consistency — and their support team is always there to guide me.” <br>                        
+                        — <i>Matthew, 30</i></p>
+                    <p>“I contacted the GREENTA support team to help me achieve my goal of winning my first boxing match. Thanks to their personalized service I stepped on the ring with the best physical condition possible. I have to thank GREENTA for offering me a high quality experience I could afford.”                                                                                                            
+                        — <i>Andrew, 21</i></p>
+                    <p>“I’ve tried many protein snacks, but GREENTA stands out. The flavour is great, the ingredients are trustworthy, and their customer service is excellent. Definitely my go-to brand from now on.” <br>
+                        — <i>Julia, 27</i></p>
+                </p> 
+                
+            
+                
+            
+            </div>
+        </main>
+       <aside class="sidebar closed" id="sidebar">
+            <nav class="sidebar-menu">
+                <ul onclick = "toggleSidebar()">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#our-shop">Our Shop</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    
+                    <li class="no-700"><a>Go back</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 <strong>GREENTA</strong>. Tutti i diritti riservati.</p>
+    </footer>
+    
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        function toggleSidebar() {
+            sidebar.classList.toggle('closed');
+        }
+    </script>
+
+</body>
+</html>

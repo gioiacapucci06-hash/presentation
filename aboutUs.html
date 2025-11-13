@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GREENTA Profile</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link"> <h1><strong>GREENTA</strong></h1>
+            </a>
+        </div>
+        <div class="header-menu-btn" onclick="toggleSidebar()">
+            <span>&#9776; Menu</span>
+        </div>
+    </header>
+    
+    <div class="main-layout">
+        
+        <main>
+            <div class="content-page">
+                <h2>About Us</h2>
+                <hr>
+                <p>In 2020, Greenta was born from a group of university students who shared a bold vision: to reshape the way people approach nutrition through smart, functional, and genuinely natural products.
+
+                    What started as an idea between classes quickly became a mission: to mix science, performance, and taste into a new generation of protein and fit snacks designed for active, ambitious minds.
+                    Rooted in Italian excellence, Greenta embodies the values that inspired its founders from the very beginning:
+                    
+                    <p><strong>• Authenticity</strong> in every ingredient and choice we make.
+                    <p><strong>• Performance</strong> - as physical energy, but also as a lifestyle philosophy.</p>
+                    <p><strong>• Sustainability</strong>: because true strength grows only from balance with nature.</p> 
+                    <p><strong>• Innovation</strong>: turning creativity and research into tangible well-being.</p> From the initial small kitchen experiments to the sophisticated formulae of today, Greenta has remained true to its founding spirit: young, determined, and forward-looking. We are not just a brand; we are an evolution of generations who believe in healthy ambition.
+</p>
+                <p><strong><h3><u>Our mission</u></h3></strong></p>    
+                <p> Our mission is to fuel active and health-conscious lifestyles with natural, protein-rich snacks made in Italy.
+                   We craft every product with care, combining clean nutrition, authentic taste, and sustainable Italian ingredients — empowering people to perform better, live better, and feel better every day.
+                </p> 
+                <p><strong><h3><u>Our vision</u></h3></strong></p>
+                   To make Italy a global benchmark for healthy and delicious nutrition, where fitness meets flavor and sustainability.
+                </p>
+                
+                
+            </div>
+        </main>
+       <aside class="sidebar closed" id="sidebar">
+            <nav class="sidebar-menu">
+                <ul onclick = "toggleSidebar()">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#our-shop">Our Shop</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    
+                    <li class="no-700"><a>Go back</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 <strong>GREENTA</strong>. Tutti i diritti riservati.</p>
+    </footer>
+    
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        function toggleSidebar() {
+            sidebar.classList.toggle('closed');
+        }
+    </script>
+
+</body>
+</html>

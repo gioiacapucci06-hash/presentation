@@ -1,0 +1,429 @@
+/* Definizioni Colori */
+:root{
+    --green-dark: #006400; /* Verde scuro */
+    --background-color: white; 
+    --text-color: #333;
+    --sidebar-width: 250px; /* Larghezza del menu quando aperto */
+}
+
+/* Reset e Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Intestazione (Header) */
+header {
+    background-color: var(--green-dark);
+    color: white;
+    padding: 1em 20px;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between; /* Sposta il logo a sinistra e il pulsante a destra */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: white; 
+    font-weight: 1200;
+}
+.logo-link {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit;
+}
+
+/* Stile del Nuovo Pulsante nell'Header */
+.header-menu-btn {
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.header-menu-btn:hover {
+    background-color: white;
+    color: var(--green-dark);
+}
+
+img {
+    width: 1470px; /* L'immagine non sarà mai più larga dell'80% del suo contenitore */
+    height: auto;  /* Mantiene le proporzioni originali */
+    display: block; /* La centra facilmente */
+    margin: 0px auto; /* Aggiunge spazio e la centra orizzontalmente */
+    
+}
+
+/* Layout Principale (Sidebar + Main) */
+.main-layout {
+    min-height: calc(100vh - 100px); /* Calcola altezza meno header e footer */
+}
+
+/* Menu Laterale (Sidebar) */
+.sidebar {
+    /* Posizionamento fisso a destra */
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    height: 100%; /* Altezza completa dello schermo */
+    width: var(--sidebar-width); /* Larghezza Iniziale Chiusa */
+
+    background-color: var(--background-color);
+    box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+    z-index: 1050; 
+    
+    transition: transform 0.3s ease-in-out;
+
+}
+
+/* STATO APERTO (Quando la classe 'closed' viene RIMOSSA) */
+/* L'elemento si trova nella posizione 0 (visibile) */
+.sidebar {
+    transform: translateX(0); 
+}
+/* STATO CHIUSO (Quando la classe 'closed' è PRESENTE) */
+/* Sovrascrive lo stato aperto, nascondendo l'elemento */
+.sidebar.closed {
+    /* Spostata completamente fuori a destra */
+    transform: translateX(var(--sidebar-width)); 
+}
+
+/* IMPORTANTE: Dobbiamo rimuovere la parte di testo del pulsante dal flusso del menu principale */
+.sidebar-menu {
+    width: 100%; /* Occupa tutta l'area del menu aperto */
+    padding-top: 80px; /* Spazio in alto sotto l'header */
+}
+
+
+/* Contenuto del Menu (link) - Nascondiamo i link finché non è aperto */
+.sidebar-menu {
+    width: var(--sidebar-open-width); /* Occupa tutta l'area del menu aperto */
+    padding-top: 80px; /* Spazio in alto sotto l'header */
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stile dei Link (restano simili) */
+.sidebar-menu ul li a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-right: 5px solid transparent; /* Bordino a destra */
+    transition: all 0.3s;
+    font-weight: 700;
+}
+.sidebar-menu ul li.no-700 a {
+    font-weight: normal; /* Ritorna al peso del font standard */
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #e6e6e6;
+    color: var(--green-dark);
+    border-right: 5px solid var(--green-dark);
+    font-weight: 700;
+}
+.sidebar-menu ul li.no-700 a:hover {
+    font-weight: normal; /* Ritorna al peso del font standard */
+    background-color: #e6e6e6;
+    color: var(--text-color);
+    border-right: 0px;
+}
+/* Contenuto Principale (Main) */
+main {
+    flex-grow: 1; /* Occupa tutto lo spazio restante */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centra il contenuto principale */
+}
+
+/* Stile Anteprime Sezioni */
+.anteprima-sezione {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.anteprima-sezione h2 {
+    color: var(--green-dark);
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.sfondo-chiaro {
+    background-color: #f9f9f9; /* Per alternare leggermente le sezioni */
+}
+
+/* Pulsante "Learn More" */
+.btn-learn-more {
+    display: inline-block;
+    background-color: var(--green-dark);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-learn-more:hover {
+    background-color: #008000; /* Verde leggermente più chiaro al hover */
+}
+
+.contact-details-container {
+    display: flex;
+    flex-wrap: wrap; /* Permette l'impilamento su schermi piccoli */
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center; /* Assicura che il testo sia allineato a sinistra */
+}
+
+.contact-info, .map-container {
+    flex: 1; /* Distribuisce lo spazio equamente */
+    min-width: 250px; /* Non scendere sotto questa larghezza */
+}
+
+.contact-info h3 {
+    color: var(--green-dark);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.mappa-contatto {
+    max-width: 100%; /* L'immagine non sarà mai più larga dell'80% del suo contenitore */
+    height: auto;  /* Mantiene le proporzioni originali */
+    display: block; /* La centra facilmente */
+    margin: 0px auto; /* Aggiunge spazio e la centra orizzontalmente */
+}
+/* --- STILE PER LA PAGINA OUR TEAM --- */
+
+.team-grid {
+    display: grid;
+    /* Crea 2 colonne di larghezza uguale */
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px; /* Spazio tra le card */
+}
+
+.team-member-card {
+    display: flex; /* Foto a sinistra, info a destra */
+    align-items: center;
+    gap: 15px; /* Spazio tra foto e testo */
+    padding: 15px;
+    background-color: white; /* Sfondo bianco pulito per la card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.member-photo img {
+    width: 80px; /* Dimensione fissa per la foto */
+    height: 80px;
+    border-radius: 50%; /* Rende l'immagine CIRCOLARE */
+    object-fit: cover; /* Assicura che l'immagine copra l'area senza deformarsi */
+}
+
+.member-info h3 {
+    margin: 0 0 5px 0;
+    color: var(--green-dark); /* Usa il colore del tema */
+    font-size: 1.2em;
+    text-transform: uppercase; /* Come nell'esempio */
+}
+
+.member-info .role {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+}
+
+.member-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.member-info p a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.member-info p a:hover {
+    text-decoration: underline;
+}
+table {
+    width: 80%; /* Occupa l'80% dello spazio disponibile */
+    margin: 20px auto; /* Centra la tabella e aggiunge spazio */
+    border-collapse: collapse; /* Unisce i bordi delle celle in un unico bordo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Stile per celle di intestazione (th) e dati (td) */
+th, td {
+    border: 1px solid #ddd; /* Aggiunge un bordo grigio chiaro */
+    padding: 12px; /* Aggiunge spazio interno alla cella */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+/* Stile solo per le intestazioni (th) */
+th {
+    background-color: var(--green-dark); /* Usa il tuo verde scuro */
+    color: white; /* Testo bianco */
+    text-align: center;
+}
+
+/* Effetto "Zebra" (colore alternato delle righe per leggibilità) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Sfondo leggermente grigio per righe pari */
+}
+
+/* --- Media Query per Reattività (su schermi piccoli) --- */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Impila le card (1 colonna) */
+    }
+}
+/* --- STILE PER LA PAGINA OUR SHOP (Prodotti) --- */
+
+.product-list {
+    display: flex;
+    flex-direction: column; /* Impila i prodotti verticalmente */
+    gap: 20px; /* Spazio tra i prodotti */
+}
+
+/* Il rettangolo grigio chiaro */
+.product-card {
+    display: flex; /* Foto a sinistra, info a destra */
+    gap: 20px; /* Spazio tra foto e info */
+    padding: 15px;
+    background-color: #f9f9f9; /* Sfondo grigio chiaro */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    min-height: 150px; 
+}
+
+/* Contenitore per l'immagine quadrata */
+.product-image {
+    width: 150px; /* Larghezza fissa per la foto */
+    flex-shrink: 0; /* Impedisce all'immagine di restringersi */
+}
+
+/* L'immagine (impostata per essere un quadrato perfetto) */
+.product-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Mantiene le proporzioni e riempie il quadrato */
+    border-radius: 8px; 
+}
+
+/* Contenitore per le informazioni (a destra) */
+.product-info {
+    display: flex;
+    flex-direction: column; /* Impila info (nome, p) e prezzo (span) */
+    flex-grow: 1; /* Occupa tutto lo spazio rimanente */
+}
+
+.product-info h3 {
+    margin: 0 0 10px 0;
+    color: var(--green-dark);
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Stile per il prezzo */
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--green-dark);
+    
+    /* *** QUESTA È LA PARTE CHIAVE *** */
+    margin-top: auto; /* Spinge il prezzo in fondo al contenitore */
+    align-self: flex-end; /* Spinge il prezzo a destra */
+    
+    padding-top: 10px; /* Spazio tra descrizione e prezzo */
+}
+.product-section-title {
+    font-size: 1.8em; /* Dimensione del titolo */
+    color: var(--green-dark); /* Usa il tuo colore principale */
+    
+    /* Spaziatura */
+    margin-top: 40px; /* Aggiunge spazio SOPRA il titolo (per separare dalla sezione precedente) */
+    margin-bottom: 15px; /* Spazio tra il titolo e la prima card sotto di esso */
+    
+    /* Linea di separazione */
+    border-bottom: 2px solid var(--green-dark);
+    padding-bottom: 5px;
+}
+
+/* Opzionale: Rimuove il margine superiore dal primo titolo della lista */
+.product-list .product-section-title:first-child {
+    margin-top: 10px;
+}
+/* Media Query per la reattività (su schermi piccoli, la sidebar scompare) */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none; /* Nasconde la sidebar su schermi piccoli */
+    }
+
+    .main-layout {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 0; /* Rimuove il centering per lasciare che si adatti */
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    header {
+        position: static; /* Header normale su mobile */
+    }
+}
+/* Piè di pagina (Footer) */
+footer {
+    background-color: var(--green-dark);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer strong {
+    font-weight: bold;
+}

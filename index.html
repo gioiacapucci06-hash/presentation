@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREENTA - Company Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+             <h1><strong>GREENTA</strong></h1>
+            </a>
+        </div>
+        <div class="header-menu-btn" onclick="toggleSidebar()">
+            <span>&#9776; Menu</span>
+        </div>
+    </header>
+    <img src="presentazione.jpg" alt="inizio">
+    <div class="main-layout">
+
+        <main>
+            
+            <section id="about-us" class="anteprima-sezione">
+                <h2>About Us</h2>
+                <div class="contenuto-anteprima">
+                    <p>In 2020, GREENTA was born from a group of university students who shared a bold vision: to reshape the way people approach nutrition through smart, functional, and genuinely natural products...</p>
+                    <a href="aboutUs.html" class="btn-learn-more">Learn More</a>
+                </div>
+            </section>
+
+            <section id="our-services" class="anteprima-sezione sfondo-chiaro">
+                <h2>Our Services</h2>
+                <div class="contenuto-anteprima">
+                    <p>At GREENTA, we’re redefining what it means to live healthy naturally. Our philosophy is simple: real nutrition, powered by plants. To help our customers take a truly holistic approach to wellness, we’ve partnered with Verdi Nutrition Clinic...</p>
+                    <a href="ourServices.html" class="btn-learn-more">Learn More</a>
+                </div>
+            </section>
+
+            <section id="our-shop" class="anteprima-sezione">
+                <h2>Our Shop</h2>
+                <div class="contenuto-anteprima">
+                    <p>Discover all our products! <br>
+                        Protein bars, protein powders, ...
+                    </p>
+                    <a href="shop.html" class="btn-learn-more">Learn More</a>
+                </div>
+            </section>
+
+            <section id="our-team" class="anteprima-sezione sfondo-chiaro">
+                <h2>Our Team</h2>
+                <div class="contenuto-anteprima">
+                    <p>This is our team</p>
+                    <a href="team.html" class="btn-learn-more">Learn More</a>
+                </div>
+            </section>
+
+            <section id="testimonials" class="anteprima-sezione">
+                <h2>Testimonials</h2>
+                <div class="contenuto-anteprima">
+                    <p>At GREENTA, we’re proud to support athletes, fitness enthusiasts, and anyone striving for a healthier lifestyle. Here’s what some of our customers have to say about their experience with our products and services...</p>
+                    <a href="testimonials.html" class="btn-learn-more">Learn More</a>
+                </div>
+            </section>
+
+            <section id="contact-us" class="anteprima-sezione sfondo-chiaro">
+                <h2>Contact Us</h2>
+                <div class="contact-details-container">
+                    
+                    <div class="contact-info">
+                        
+                        <h3>Where can you find us?</h3>
+                        <p>Piazzale della Vittoria, 15, 47100 Forlì</p>
+                        
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:greenta@gmail.com">greenta@gmail.com</a></p>
+                        
+                        <h3>Telephone</h3>
+                        <p><a href="tel:+390987654321">+39 098 765 4321</a></p>
+                    </div>
+                    
+                  <div class="map-container">
+            <img src="mappa.png" alt="posizione" class="mappa-contatto"> 
+        </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Messaggio</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Invia Messaggio</button>
+                </form>
+
+            </section>
+
+        </main>
+            
+            <aside class="sidebar closed" id="sidebar">
+            <nav class="sidebar-menu">
+                <ul onclick = "toggleSidebar()">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#our-shop">Our Shop</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    
+                    <li class="no-700"><a>Go back</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+    
+    <script>
+        const sidebar = document.getElementById('sidebar');
+
+       function toggleSidebar() {
+           // La funzione toglie o mette la classe 'closed'
+        sidebar.classList.toggle('closed');
+        }
+        </script> 
+
+    <footer>
+        <p>&copy; 2025 <strong>GREENTA</strong>. Tutti i diritti riservati.</p>
+    </footer>
+

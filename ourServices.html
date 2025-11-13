@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GREENTA Profile</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link"> <h1><strong>GREENTA</strong></h1>
+            </a>
+        </div>
+        <div class="header-menu-btn" onclick="toggleSidebar()">
+            <span>&#9776; Menu</span>
+        </div>
+    </header>
+    
+    <div class="main-layout">
+        
+        <main>
+            <div class="content-page">
+                <h2>Our services</h2>
+                <hr>
+
+                <p><strong><u>Our Personalized Nutritional Plans</u></strong></p>
+                    <p>At <strong>GREENTA</strong>, we’re redefining what it means to live healthy naturally.<br> 
+                        Our philosophy is simple: real nutrition, powered by plants.<br>
+                        To help our customers take a truly holistic approach to wellness, we’ve partnered with <strong>Verdi Nutrition Clinic</strong>, a professional team of certified dietitians and nutrition experts who specialize in plant-based and vegetarian nutrition.</p>
+                <p><strong><u>About Verdi Nutrition Clinic</u></strong></p>    
+                    <p><strong>Verdi Nutrition Clinic</strong> is known for its science based approach to health and sustainable eating. Their team focuses on developing meal plans that are both nutritionally complete and environmentally friendly perfect for anyone following a vegetarian lifestyle.<br> 
+                        Every plan is designed to suit your individual needs, whether your goal is to boost energy, improve digestion, enhance performance, or manage your weight in a balanced, long-term way. </p>
+                <p><strong><u>Why Choose GREENTA for Your Nutrition Plan?</u></strong></p>
+                    
+                    <p>While Verdi Clinic offers their own services, becoming a GREENTA client gives you exclusive benefits and a smoother experience.<br> 
+                    By getting your nutritional plan directly through GREENTA: </p>
+                    <p><strong>•</strong> You receive a unified experience combining Verdi’s professional guidance with our line of plant based protein powders, bars, and supplements, all perfectly matched to your plan.</p>
+                    <p><strong>•</strong> You gain exclusive discounts on GREENTA products that align with your personalized meal plan.</p>
+                    <p><strong>•</strong> You have one point of contact for everything consultations, plan updates, and product deliveries, saving you time and hassle.</p>
+                    <p><strong>•</strong> You can track progress easily through our integrated online wellness platform, where both your nutritionist and GREENTA team can monitor your results and make adjustments.</p>
+                <p><strong><u>Our Nutrition Plan Packages</u></strong></p>
+                    
+                    <p>We offer flexible packages to suit your wellness goals and lifestyle. All plans are 100% vegetarian and tailored to your specific dietary needs. </p>
+                    <table>
+                        <tr>
+                            <th><strong>Plan Duration</strong></th>
+                            <th><strong>What’s Included</strong></th>
+                            <th><strong>Price</strong></th>
+                        </tr>
+                        <tr>
+                            <td>3-Month Starter Plan</td>
+                            <td>Initial consultation, personalized vegetarian meal plan, and 2 follow-up sessions</td>
+                            <td><strong>$149</strong></td>
+                         </tr>
+                         <tr>
+                            <td>6-Month Wellness Plan</td>
+                            <td>Monthly progress reviews, customized supplement pairing, and priority nutritionist support </td>
+                            <td><strong>$269</strong></td>
+                        </tr>
+                        <tr>
+                            <td>12-Month Transformation Plan</td>
+                            <td>Full-year personalized coaching, detailed nutrient tracking, unlimited consultations, and exclusive 20% discount on ALL GREENTA products </td>
+                            <td><strong><del>$500</del>$479 </strong></td>
+                         </tr>
+                    </table>
+                    <p>Each plan includes:</p>
+                    <p><strong>•</strong> A one-on-one consultation with a <strong>certified vegetarian nutritionist</strong>.</p>
+                    <p><strong>•</strong> <strong>Tailored meal and supplement guidance</strong> that fits your health goals.</p>
+                    <p><strong>•</strong> Access to our <strong>digital wellness portal</strong> with recipes, progress tracking, and resources.</p>
+                    <p><strong>•</strong> Exclusive GREENTA member <strong>discounts</strong> and early access to new product releases</p>
+                </p> 
+                
+            
+            
+                
+            
+            </div>
+        </main>
+       <aside class="sidebar closed" id="sidebar">
+            <nav class="sidebar-menu">
+                <ul onclick = "toggleSidebar()">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#our-shop">Our Shop</a></li>
+                    <li><a href="#our-team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    
+                    <li class="no-700"><a>Go back</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 <strong>GREENTA</strong>. Tutti i diritti riservati.</p>
+    </footer>
+    
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        function toggleSidebar() {
+            sidebar.classList.toggle('closed');
+        }
+    </script>
+
+</body>
+</html>
